@@ -9,7 +9,6 @@ project(blink C CXX ASM)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 
-set(PICO_EXAMPLES_PATH ${PROJECT_SOURCE_DIR})
 
 # initialize the Raspberry Pi Pico SDK
 pico_sdk_init()

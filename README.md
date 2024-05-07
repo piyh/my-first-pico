@@ -29,13 +29,26 @@ Navigate to `./my-first-c-code/blink`, run
 
 `cmake .. -DPICO_BOARD=pico_w && make`
 
-# Run
+# Run Blink
 
 Restart the Pico W while holding BOOTSEL button.
 
 Copy built `.uf2` file to pico.  Pico will restart and code will run
 
 `cp picow_blink.uf2 /Volumes/RPI-RP2/.`
+
+
+# Hello World - TTY debugging
+
+`cd my-first-c-code/hello-world/build`
+
+`cmake .. -DPICO_BOARD=pico_w && make`
+
+`cp hello_usb.uf2 /Volumes/RPI-RP2/.`
+
+`TERM=xterm screen /dev/tty.usbmodem101 115200`
+
+Control + A, then Control + \ to quit screen.
 
 
 # When things go wrong!
