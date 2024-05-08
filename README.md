@@ -27,7 +27,7 @@ add this to your `.bashrc` or `.zshrc` file: `PICO_SDK_PATH=/Users/ryan/Desktop/
 
 Navigate to `./my-first-c-code/blink`, run 
 
-`cmake .. -DPICO_BOARD=pico_w && make`
+`cmake .. -DPICO_BOARD=pico_w && make -j8`
 
 # Run Blink
 

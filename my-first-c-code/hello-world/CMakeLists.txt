@@ -20,8 +20,11 @@ if (TARGET tinyusb_device)
             )
 
     # pull in common dependencies
-    target_link_libraries(hello_usb pico_stdlib)
-
+    target_link_libraries(hello_usb pico_stdlib
+            pico_stdlib              # for core functionality
+            pico_cyw43_arch_none     # we need Wifi to access the GPIO, but we don't need anything else
+            )
+            
     # enable usb output, disable uart output
     pico_enable_stdio_usb(hello_usb 1)
     pico_enable_stdio_uart(hello_usb 0)
